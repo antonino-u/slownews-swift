@@ -58,4 +58,11 @@ final class slownews_swiftTests: XCTestCase {
             }
         }
     }
+    
+    static var allTests = [
+        ("testNewsSources", testNewsSources),
+        ("testEditions", testEditions),
+        ("testEditionWithDate", testEditionWithDate),
+        ("testFirstEdition", testFirstEdition),
+    ]
 }

@@ -10,10 +10,15 @@ on:
 jobs:
   build:
 
-    runs-on: macos-latest
+    runs-on: [macos-latest, ubuntu-18.04]
 
     steps:
     - uses: actions/checkout@v1
+      
+    - name: Swift Setup
+      uses: YOCKOW/Action-setup-swift@v1.1.0
+      with:
+        swift-version: 5.1.3
     - name: Build
       run: swift build -v
     - name: Run tests
