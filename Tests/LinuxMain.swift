@@ -1,7 +1,7 @@
 import XCTest
 
-import slownews_swiftTests
+import slownewsTests
 
 var tests = [XCTestCaseEntry]()
-tests += slownews_swiftTests.allTests()
+tests += slownewsTests.allTests()
 XCTMain(tests)

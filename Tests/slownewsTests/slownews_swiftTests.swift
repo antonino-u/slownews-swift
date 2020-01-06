@@ -1,7 +1,7 @@
 import XCTest
-@testable import slownews_swift
+@testable import slownews
 
-final class slownews_swiftTests: XCTestCase {
+final class slownewsTests: XCTestCase {
     
     func testNewsSources() {
 
