@@ -10,16 +10,21 @@ on:
 jobs:
   build:
 
-    runs-on: [macos-latest, ubuntu-18.04]
+    runs-on: [macos-latest]
 
     steps:
     - uses: actions/checkout@v1
+    
+    - name: Select Xcode Version
+      run: sudo xcode-select --switch /Applications/Xcode_11.2.1.app
+      # Note: Mapping of Xcode version to Swift version can be found here: https://swift.org/download/#releases
+      # Note: Xcode locations can be found here: https://help.github.com/en/actions/automating-your-workflow-with-github-actions/software-installed-on-github-hosted-runners#macos-1015
       
-    - name: Swift Setup
-      uses: YOCKOW/Action-setup-swift@v1.1.0
-      with:
-        swift-version: 5.1.3
+    - name: Check Swift Version
+      run: swift --version
+
     - name: Build
       run: swift build -v
+      
     - name: Run tests
       run: swift test -v
