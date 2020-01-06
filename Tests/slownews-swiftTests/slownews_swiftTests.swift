@@ -24,7 +24,8 @@ final class slownews_swiftTests: XCTestCase {
     func testEditionWithDate() {
 
         let expectation = XCTestExpectation()
-        self.test(endpoint: Endpoints.editionWithDate(date: Date())) { _ in
+        let date = Calendar.current.date(byAdding: .day, value: -2, to: Date())!
+        self.test(endpoint: Endpoints.editionWithDate(date: date)) { _ in
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 10.0)
