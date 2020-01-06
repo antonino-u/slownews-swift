@@ -9,18 +9,18 @@ import Foundation
 
 public struct Article: Model {
     
-    let priority: Int
-    let readMins: Int
-    let id: String
-    let source: String
-    let title: String
-    let author: String?
-    let category: String
-    let description: String
-    let url: String
-    let image: String
-    @DateCodable<iso8601FullDateCodableStrategy> var written: Date
-    @DateCodable<yyyyMMddDateCodableStrategy> var firstEdition: Date
+    public let priority: Int
+    public let readMins: Int
+    public let id: String
+    public let source: String
+    public let title: String
+    public let author: String?
+    public let category: String
+    public let description: String
+    public let url: String
+    public let image: String
+    @DateCodable<iso8601FullDateCodableStrategy> public var written: Date
+    @DateCodable<yyyyMMddDateCodableStrategy> public var firstEdition: Date
     
     enum CodingKeys: String, CodingKey {
         

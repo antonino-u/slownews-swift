@@ -9,5 +9,5 @@ import Foundation
 
 public struct NewsSources: Model {
     
-    let sources: [NewsSource]
+    public let sources: [NewsSource]
 }

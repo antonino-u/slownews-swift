@@ -16,23 +16,23 @@ public struct Endpoints {
         static let newsSources = "sources"
     }
     
-    static func editionWithId(id: String) -> AnyEndpoint<FullEdition> {
+    public static func editionWithId(id: String) -> AnyEndpoint<FullEdition> {
         
         return AnyEndpoint<FullEdition>(urlString: "\(Statics.base)/\(Statics.editions)/\(id)")
     }
     
-    static func editionWithDate(date: Date) -> AnyEndpoint<FullEdition> {
+    public static func editionWithDate(date: Date) -> AnyEndpoint<FullEdition> {
         
         let stringValue = "\(Statics.base)/\(Statics.editions)/\(DateFormatter.yyyyMMdd.string(from: date))"
         return AnyEndpoint<FullEdition>(urlString: stringValue)
     }
     
-    static func compactEditions(page: Int = 1) -> AnyEndpoint<CompactEditionsPage> {
+    public static func compactEditions(page: Int = 1) -> AnyEndpoint<CompactEditionsPage> {
         
         return AnyEndpoint<CompactEditionsPage>(urlString: "\(Statics.base)/\(Statics.editions)?page=\(page)")
     }
     
-    static func newsSources() -> AnyEndpoint<NewsSources> {
+    public static func newsSources() -> AnyEndpoint<NewsSources> {
         
         return AnyEndpoint<NewsSources>(urlString: "\(Statics.base)/\(Statics.newsSources)")
     }
