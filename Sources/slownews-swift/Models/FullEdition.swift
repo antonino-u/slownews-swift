@@ -19,13 +19,13 @@ import Foundation
 
 public struct FullEditionFlat: Model {
     
-    let isWeekend: Bool
-    let language: String
-    let id: String
-    @DateCodable<yyyyMMddDateCodableStrategy> var date: Date
-    let sections: [Section]
-    let isoDay: Int
-    let image: String
+    public let isWeekend: Bool
+    public let language: String
+    public let id: String
+    @DateCodable<yyyyMMddDateCodableStrategy> public var date: Date
+    public let sections: [Section]
+    public let isoDay: Int
+    public let image: String
 
     enum CodingKeys: String, CodingKey {
         

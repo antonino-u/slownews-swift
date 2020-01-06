@@ -7,21 +7,21 @@
 
 import Foundation
 
-protocol DateCodableStrategy {
+public protocol DateCodableStrategy {
 
     static var dateFormatter: DateFormatter { get }
 }
 
-struct iso8601FullDateCodableStrategy: DateCodableStrategy {
+public struct iso8601FullDateCodableStrategy: DateCodableStrategy {
 
-    static var dateFormatter: DateFormatter {
+    public static var dateFormatter: DateFormatter {
         DateFormatter.iso8601Full
     }
 }
 
-struct yyyyMMddDateCodableStrategy: DateCodableStrategy {
+public struct yyyyMMddDateCodableStrategy: DateCodableStrategy {
 
-    static var dateFormatter: DateFormatter {
+    public static var dateFormatter: DateFormatter {
         DateFormatter.yyyyMMdd
     }
 }
@@ -31,16 +31,16 @@ struct CodableDateError: Error {
     var message: String
 }
 
-@propertyWrapper struct DateCodable<Formatter: DateCodableStrategy>: Codable {
+@propertyWrapper public struct DateCodable<Formatter: DateCodableStrategy>: Codable {
     
-    var wrappedValue: Date
+    public var wrappedValue: Date
     
     private var dateFormatter: DateFormatter {
 
         return Formatter.dateFormatter
     }
         
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         
         self.wrappedValue = Date()
         let container = try decoder.singleValueContainer()
@@ -51,7 +51,7 @@ struct CodableDateError: Error {
         self.wrappedValue = date
     }
     
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         
         var container = encoder.singleValueContainer()
         let stringValue = self.dateFormatter.string(from: self.wrappedValue)

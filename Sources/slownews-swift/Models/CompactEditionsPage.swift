@@ -9,8 +9,8 @@ import Foundation
 
 public struct CompactEditionsPage: Model {
     
-    let page: Int
-    let compactEditions: [CompactEdition]
+    public let page: Int
+    public let compactEditions: [CompactEdition]
     
     enum CodingKeys: String, CodingKey {
         

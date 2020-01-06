@@ -13,7 +13,7 @@ public protocol Endpoint {
     var url: URL { get set }
 }
 
-extension Endpoint {
+public extension Endpoint {
     
     func get(completion: @escaping ((_ result: Result<Self.Model, EndpointError>) -> Void)) {
         Networking.get(endpoint: self, completion: completion)

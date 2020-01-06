@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EndpointError: Error {
+public enum EndpointError: Error {
     
     case noData
     case parsing(error: Error)

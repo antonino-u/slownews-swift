@@ -9,13 +9,13 @@ import Foundation
 
 public struct CompactEdition: Model {
     
-    let isWeekend: Bool
-    let language: String
-    let id: String
-    @DateCodable<yyyyMMddDateCodableStrategy> var date: Date
-    let isoDay: Int
-    let image: String
-    @DateCodable<iso8601FullDateCodableStrategy> var pipelineRunAt: Date
+    public let isWeekend: Bool
+    public let language: String
+    public let id: String
+    @DateCodable<yyyyMMddDateCodableStrategy> public var date: Date
+    public let isoDay: Int
+    public let image: String
+    @DateCodable<iso8601FullDateCodableStrategy> public var pipelineRunAt: Date
 
     enum CodingKeys: String, CodingKey {
         

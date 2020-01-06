@@ -9,20 +9,20 @@ import Foundation
 
 public struct Section: Model {
     
-    let displayTitle: Bool
-    let template: String
-    let articles: [Article]
-    let position: Int
-    let articleLimit: Int
-    let filterPosition: Int
-    let isCurated: Bool
-    let showCuratorInfo: Bool
-    let slug: String
-    let title: String
-    let subtitle: String
-    let classes: String
-    let variant: String?
-    let emoji: String?
+    public let displayTitle: Bool
+    public let template: String
+    public let articles: [Article]
+    public let position: Int
+    public let articleLimit: Int
+    public let filterPosition: Int
+    public let isCurated: Bool
+    public let showCuratorInfo: Bool
+    public let slug: String
+    public let title: String
+    public let subtitle: String
+    public let classes: String
+    public let variant: String?
+    public let emoji: String?
     
     enum CodingKeys: String, CodingKey {
         

@@ -9,16 +9,16 @@ import Foundation
 
 public struct NewsSource: Model {
   
-    let isActive: Bool
-    let isFavored: Bool
-    let id: String
-    let slug: String
-    let name: String
-    let url: String
-    let logo: String?
-    let category: String
-    let language: String
-    let country: String
+    public let isActive: Bool
+    public let isFavored: Bool
+    public let id: String
+    public let slug: String
+    public let name: String
+    public let url: String
+    public let logo: String?
+    public let category: String
+    public let language: String
+    public let country: String
     
     enum CodingKeys: String, CodingKey {
         case isActive
