@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Article: Codable {
+public struct Article: Model {
     
     let priority: Int
     let readMins: Int
